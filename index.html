@@ -4,32 +4,37 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Terra Build - Premier Construction & Infrastructure</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>Construction Website with Dark Mode</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <!-- Navigation -->
+    
     <nav class="navbar">
       <div class="nav-container">
-        <a href="#" class="nav-brand">
-          <i class="fas fa-hammer nav-logo"></i>
-          <span class="nav-title">Terra Build</span>
+        <a href="#home" class="nav-brand">
+          <img src="./Resources/Logo.jpg" alt="Manothrika Infra Pvt Ltd" class="nav-logo" />
         </a>
+        
         <ul class="nav-menu">
-          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#home" class="nav-link">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
-        <div class="nav-toggle">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" aria-label="Toggle theme">
+            <span class="theme-icon">🌙</span>
+          </button>
+          
+          <button class="nav-toggle" aria-label="Toggle menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
         </div>
       </div>
     </nav>
@@ -46,12 +51,10 @@
         </p>
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary">
-            <i class="fas fa-play"></i>
-            View Projects
+            ▶ View Projects
           </a>
           <a href="#contact" class="btn btn-secondary">
-            <i class="fas fa-phone"></i>
-            Get Quote
+            📞 Get Quote
           </a>
         </div>
       </div>
@@ -66,45 +69,33 @@
         </div>
         <div class="stats-grid">
           <div class="stat-card">
-            <div class="stat-icon award">
-              <i class="fas fa-award"></i>
-            </div>
-            <h3>250+</h3>
+            <div class="stat-icon award">🏆</div>
+            <h3 class="stat-number">250+</h3>
             <p>Projects Completed</p>
           </div>
           <div class="stat-card">
-            <div class="stat-icon building">
-              <i class="fas fa-building"></i>
-            </div>
-            <h3>15</h3>
+            <div class="stat-icon building">🏢</div>
+            <h3 class="stat-number">15</h3>
             <p>Cities Transformed</p>
           </div>
           <div class="stat-card">
-            <div class="stat-icon clock">
-              <i class="fas fa-clock"></i>
-            </div>
-            <h3>25+</h3>
+            <div class="stat-icon clock">⏰</div>
+            <h3 class="stat-number">25+</h3>
             <p>Years Experience</p>
           </div>
           <div class="stat-card">
-            <div class="stat-icon users">
-              <i class="fas fa-users"></i>
-            </div>
-            <h3>500+</h3>
+            <div class="stat-icon users">👥</div>
+            <h3 class="stat-number">500+</h3>
             <p>Expert Team Members</p>
           </div>
           <div class="stat-card">
-            <div class="stat-icon check">
-              <i class="fas fa-check-circle"></i>
-            </div>
-            <h3>98%</h3>
+            <div class="stat-icon check">✅</div>
+            <h3 class="stat-number">98%</h3>
             <p>On-Time Delivery</p>
           </div>
           <div class="stat-card">
-            <div class="stat-icon star">
-              <i class="fas fa-star"></i>
-            </div>
-            <h3>4.9/5</h3>
+            <div class="stat-icon star">⭐</div>
+            <h3 class="stat-number">4.9/5</h3>
             <p>Client Satisfaction</p>
           </div>
         </div>
@@ -128,8 +119,7 @@
               anticipates tomorrow's challenges.
             </p>
             <a href="#projects" class="btn btn-success">
-              <i class="fas fa-arrow-right"></i>
-              Explore Our Work
+              ➡️ Explore Our Work
             </a>
           </div>
           <div class="intro-image">
@@ -153,19 +143,11 @@
           <div class="filter-header">
             <h2>Featured Projects</h2>
             <div class="filter-buttons">
-              <i class="fas fa-filter"></i>
-              <button class="filter-btn active" data-filter="all">
-                All Projects
-              </button>
-              <button class="filter-btn" data-filter="infrastructure">
-                Infrastructure
-              </button>
-              <button class="filter-btn" data-filter="residential">
-                Residential
-              </button>
-              <button class="filter-btn" data-filter="commercial">
-                Commercial
-              </button>
+              <span class="filter-icon">🔍</span>
+              <button class="filter-btn active" data-filter="all">All Projects</button>
+              <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
+              <button class="filter-btn" data-filter="residential">Residential</button>
+              <button class="filter-btn" data-filter="commercial">Commercial</button>
             </div>
           </div>
         </div>
@@ -173,23 +155,144 @@
 
       <div class="projects-grid">
         <div class="container">
-          <div class="grid" id="projects-container">
+          <div class="grid">
+
             <div class="project-card" data-category="infrastructure">
               <div class="project-image">
                 <img src="https://images.pexels.com/photos/1078850/pexels-photo-1078850.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Metropolitan Bridge Complex" />
                 <div class="project-status completed">Completed</div>
               </div>
               <div class="project-content">
-                <h3>Metropolitan Bridge Complex</h3>
-                <p>A state-of-the-art suspension bridge connecting downtown districts with innovative seismic safety features.</p>
+                <h3>Caterpillar Engine Dismantling</h3>
+                <p>Dismantling and sale of equipment</p>
                 <div class="project-details">
                   <div class="project-detail">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Metro City</span>
+                    <span class="icon">📍</span>
+                    <span>Konkepudi, Andhra Pradesh</span>
                   </div>
                   <div class="project-detail">
-                    <i class="fas fa-calendar"></i>
-                    <span>36 months</span>
+                    <span class="icon">📅</span>
+                    <span>2024</span>
+                  </div>
+                </div>
+                <div class="project-progress">
+                  <div class="progress-header">
+                    <span>Progress</span>
+                    <span class="progress-percent">100%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card" data-category="infrastructure">
+              <div class="project-image">
+                <img src="https://images.pexels.com/photos/1078850/pexels-photo-1078850.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Metropolitan Bridge Complex" />
+                <div class="project-status completed">Completed</div>
+              </div>
+              <div class="project-content">
+                <h3>Civil Excavations</h3>
+                <p>Demolition and excavation of cold storage unit</p>
+                <div class="project-details">
+                  <div class="project-detail">
+                    <span class="icon">📍</span>
+                    <span>Nagapattinam, Tamil Nadu</span>
+                  </div>
+                  <div class="project-detail">
+                    <span class="icon">📅</span>
+                    <span>2023</span>
+                  </div>
+                </div>
+                <div class="project-progress">
+                  <div class="progress-header">
+                    <span>Progress</span>
+                    <span class="progress-percent">100%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card" data-category="infrastructure">
+              <div class="project-image">
+                <img src="https://images.pexels.com/photos/1078850/pexels-photo-1078850.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Metropolitan Bridge Complex" />
+                <div class="project-status completed">Completed</div>
+              </div>
+              <div class="project-content">
+                <h3>Supply and Erection</h3>
+                <p>Supply of boiler structure and erection</p>
+                <div class="project-details">
+                  <div class="project-detail">
+                    <span class="icon">📍</span>
+                    <span>Nagapattinam, Tamil Nadu</span>
+                  </div>
+                  <div class="project-detail">
+                    <span class="icon">📅</span>
+                    <span>2022</span>
+                  </div>
+                </div>
+                <div class="project-progress">
+                  <div class="progress-header">
+                    <span>Progress</span>
+                    <span class="progress-percent">100%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card" data-category="infrastructure">
+              <div class="project-image">
+                <img src="https://images.pexels.com/photos/1078850/pexels-photo-1078850.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Metropolitan Bridge Complex" />
+                <div class="project-status completed">Completed</div>
+              </div>
+              <div class="project-content">
+                <h3>Project Management</h3>
+                <p>Erection, Procurement and Construction (EPC)</p>
+                <div class="project-details">
+                  <div class="project-detail">
+                    <span class="icon">📍</span>
+                    <span>Cuttack, Odisha</span>
+                  </div>
+                  <div class="project-detail">
+                    <span class="icon">📅</span>
+                    <span>2019</span>
+                  </div>
+                </div>
+                <div class="project-progress">
+                  <div class="progress-header">
+                    <span>Progress</span>
+                    <span class="progress-percent">100%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card" data-category="infrastructure">
+              <div class="project-image">
+                <img src="https://images.pexels.com/photos/1078850/pexels-photo-1078850.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Metropolitan Bridge Complex" />
+                <div class="project-status completed">Completed</div>
+              </div>
+              <div class="project-content">
+                <h3>Wartsila Engine Dismantling</h3>
+                <p>Dismantling and Sale of equipment</p>
+                <div class="project-details">
+                  <div class="project-detail">
+                    <span class="icon">📍</span>
+                    <span>Konkepudi, Andhra Pradesh</span>
+                  </div>
+                  <div class="project-detail">
+                    <span class="icon">📅</span>
+                    <span>2019</span>
                   </div>
                 </div>
                 <div class="project-progress">
@@ -210,16 +313,46 @@
                 <div class="project-status ongoing">In Progress</div>
               </div>
               <div class="project-content">
-                <h3>Green Valley Residential Complex</h3>
-                <p>Sustainable housing development featuring 200 eco-friendly homes with solar integration.</p>
+                <h3>8 MW Cummins Engine Project</h3>
+                <p>Dismantling</p>
                 <div class="project-details">
                   <div class="project-detail">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Green Valley</span>
+                    <span class="icon">📍</span>
+                    <span>Pune, Maharashtra</span>
                   </div>
                   <div class="project-detail">
-                    <i class="fas fa-calendar"></i>
-                    <span>24 months</span>
+                    <span class="icon">📅</span>
+                    <span>Ongoing</span>
+                  </div>
+                </div>
+                <div class="project-progress">
+                  <div class="progress-header">
+                    <span>Progress</span>
+                    <span class="progress-percent">75%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 75%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="project-card" data-category="residential">
+              <div class="project-image">
+                <img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Green Valley Residential Complex" />
+                <div class="project-status ongoing">In Progress</div>
+              </div>
+              <div class="project-content">
+                <h3>8 MW Cummins Engine Project</h3>
+                <p>Erection</p>
+                <div class="project-details">
+                  <div class="project-detail">
+                    <span class="icon">📍</span>
+                    <span>Nagapattinam, Tamil Nadu</span>
+                  </div>
+                  <div class="project-detail">
+                    <span class="icon">📅</span>
+                    <span>Ongoing</span>
                   </div>
                 </div>
                 <div class="project-progress">
@@ -240,16 +373,16 @@
                 <div class="project-status ongoing">In Progress</div>
               </div>
               <div class="project-content">
-                <h3>Tech Hub Office Tower</h3>
-                <p>45-story commercial tower with cutting-edge technology and LEED certification.</p>
+                <h3>Civil Works</h3>
+                <p>Construction of Industrial Building & Sheds</p>
                 <div class="project-details">
                   <div class="project-detail">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Business District</span>
+                    <span class="icon">📍</span>
+                    <span>Narimanam, Tamil Nadu</span>
                   </div>
                   <div class="project-detail">
-                    <i class="fas fa-calendar"></i>
-                    <span>30 months</span>
+                    <span class="icon">📅</span>
+                    <span>Ongoing</span>
                   </div>
                 </div>
                 <div class="project-progress">
@@ -292,11 +425,11 @@
                 </div>
               </div>
               <div class="testimonial-rating">
-                <i class="fas fa-star star"></i>
-                <i class="fas fa-star star"></i>
-                <i class="fas fa-star star"></i>
-                <i class="fas fa-star star"></i>
-                <i class="fas fa-star star"></i>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
               </div>
               <p class="testimonial-text">Terra Build delivered exceptional results on our bridge project. Their attention to detail and commitment to safety standards exceeded all expectations.</p>
               <div class="testimonial-project">
@@ -319,11 +452,11 @@
                 </div>
               </div>
               <div class="testimonial-rating">
-                <i class="fas fa-star star"></i>
-                <i class="fas fa-star star"></i>
-                <i class="fas fa-star star"></i>
-                <i class="fas fa-star star"></i>
-                <i class="fas fa-star star"></i>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
               </div>
               <p class="testimonial-text">The sustainable approach Terra Build brought to our residential project was outstanding. They truly understand modern construction needs.</p>
               <div class="testimonial-project">
@@ -346,11 +479,11 @@
                 </div>
               </div>
               <div class="testimonial-rating">
-                <i class="fas fa-star star"></i>
-                <i class="fas fa-star star"></i>
-                <i class="fas fa-star star"></i>
-                <i class="fas fa-star star"></i>
-                <i class="fas fa-star star"></i>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
               </div>
               <p class="testimonial-text">Working with Terra Build was seamless. Their expertise in commercial construction and technology integration is unmatched.</p>
               <div class="testimonial-project">
@@ -370,42 +503,35 @@
             <div class="contact-info">
               <h2>Get In Touch</h2>
               <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-map-marker-alt"></i>
-                </div>
+                <div class="contact-icon">📍</div>
                 <div class="contact-details">
                   <h3>Head Office</h3>
                   <p>1234 Construction Blvd<br />Metro City, MC 12345<br />United States</p>
                 </div>
               </div>
               <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-phone"></i>
-                </div>
+                <div class="contact-icon">📞</div>
                 <div class="contact-details">
                   <h3>Phone</h3>
                   <p>+1 (555) 123-4567<br />+1 (555) 987-6543</p>
                 </div>
               </div>
               <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-envelope"></i>
-                </div>
+                <div class="contact-icon">✉️</div>
                 <div class="contact-details">
                   <h3>Email</h3>
                   <p>info@terrabuild.com<br />projects@terrabuild.com</p>
                 </div>
               </div>
               <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-clock"></i>
-                </div>
+                <div class="contact-icon">🕒</div>
                 <div class="contact-details">
                   <h3>Business Hours</h3>
                   <p>Monday - Friday: 8:00 AM - 6:00 PM<br />Saturday: 9:00 AM - 4:00 PM</p>
                 </div>
               </div>
             </div>
+            
             <div class="contact-form">
               <h2>Start Your Project</h2>
               <form id="contact-form">
@@ -449,8 +575,7 @@
                   ></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary" style="width: 100%">
-                  <i class="fas fa-paper-plane"></i>
-                  Submit Project Inquiry
+                  <span class="submit-text">📧 Submit Project Inquiry</span>
                 </button>
               </form>
             </div>
@@ -465,7 +590,7 @@
         <div class="footer-content">
           <div class="footer-section">
             <div class="footer-brand">
-              <i class="fas fa-hammer"></i>
+              <span class="icon">🔨</span>
               <span>Terra Build</span>
             </div>
             <p>
@@ -473,12 +598,13 @@
               sustainable solutions that build stronger communities for generations to come.
             </p>
             <div class="social-links">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#">📘</a>
+              <a href="#">🐦</a>
+              <a href="#">💼</a>
+              <a href="#">📷</a>
             </div>
           </div>
+          
           <div class="footer-section">
             <h3>Quick Links</h3>
             <ul>
@@ -489,6 +615,7 @@
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
+          
           <div class="footer-section">
             <h3>Services</h3>
             <ul>
@@ -500,6 +627,7 @@
             </ul>
           </div>
         </div>
+        
         <div class="footer-bottom">
           <div class="footer-bottom-content">
             <p>&copy; 2024 Terra Build. All rights reserved.</p>
@@ -512,7 +640,5 @@
         </div>
       </div>
     </footer>
-
-    <script src="script.js"></script>
   </body>
 </html>
