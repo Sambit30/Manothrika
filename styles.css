@@ -726,16 +726,16 @@ section {
   transition: width 0.6s ease;
 }
 
-/* Testimonials Section */
-.testimonials {
+/* statement Section */
+.statement {
   background: var(--bg-primary);
 }
 
-.testimonials-grid {
+.statement-grid {
   background: var(--bg-tertiary);
 }
 
-.testimonials-container {
+.statement-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: var(--space-xl);
@@ -1260,7 +1260,7 @@ section {
     grid-template-columns: 1fr;
   }
 
-  .testimonials-container {
+  .statement-container {
     grid-template-columns: 1fr;
   }
 }
@@ -1284,7 +1284,7 @@ section {
   }
 
   .stats-grid,
-  .testimonials-container {
+  .statement-container {
     grid-template-columns: 1fr;
     gap: var(--space-lg);
   }
