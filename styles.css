@@ -1415,3 +1415,27 @@ textarea:focus {
     scroll-behavior: auto !important;
   }
 }
+
+/* For Infra & OM html */
+.page-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   
+  align-items: center;       
+  text-align: center;
+  height: 250px;             
+  background-color: #161616; 
+  margin-bottom: 2rem;       
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  color: #cd853f; 
+}
+
+.page-header p {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin: 0;
+}
